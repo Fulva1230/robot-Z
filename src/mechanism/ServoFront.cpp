@@ -3,6 +3,7 @@
 //
 
 #include <HID.h>
+#include <Servo.h>
 #include "ServoFront.h"
 
 //#define DEBUG
@@ -48,7 +49,7 @@ void ServoFront::setDest(uint8_t destAngle) {
 #endif
 }
 
-const Servo &ServoFront::getServo() {
+const PWMServo &ServoFront::getServo() {
     return servo;
 }
 

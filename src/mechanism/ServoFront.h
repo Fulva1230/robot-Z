@@ -6,7 +6,7 @@
 #define ROBOT_Z_SERVOFRONT_H
 
 
-#include <Servo.h>
+#include <PWMServo.h>
 
 class ServoFront {
 public:
@@ -18,13 +18,13 @@ public:
 
     void setDest(uint8_t destAngle);
 
-    const Servo &getServo();
+    const PWMServo &getServo();
 
 private:
     const uint8_t pin;
     const uint16_t mini;
     const uint16_t maxi;
-    Servo servo;
+    PWMServo servo;
     uint8_t destAngle{90};
 
     int currentPos{90};
